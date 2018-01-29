@@ -1,0 +1,114 @@
+\documentclass[a5paper,12pt,twoside,openany,oldfontcommands]{memoir}
+\usepackage[british,latin]{babel}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont[Numbers=OldStyle]{Linux Libertine O}
+\newfontface{\vectis}{Vectis Bold}
+\newfontfamily{\translationfont}{Linux Biolinum O}
+\newfontface{\versicles}{Versiculum}
+\newfontface{\cruci}{Juuji}
+\setsansfont{Linux Biolinum O}
+
+\usepackage[autocompile]{gregoriotex}
+%\settrimmedsize{9in}{6in}{*}
+\setlength{\trimtop}{0pt}
+\setlength{\trimedge}{0pt}
+%\addtolength{\trimedge}{-\paperwidth}
+\settypeblocksize{170mm}{116mm}{*} % Was 101mm in a5
+\setulmargins{*}{*}{1.4}
+\setlrmargins{*}{*}{1.2}
+\setheadfoot{\onelineskip}{2\onelineskip}
+\setheaderspaces{*}{.8\onelineskip}{*}
+\checkandfixthelayout
+
+\tolerance=1000
+\pretolerance=800
+
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parindent}{0pt}
+\setlength{\stanzaskip}{6pt plus 2pt minus 1pt}
+
+\def\latin#1{\ifnum \value{versecount}>0 \stepcounter{versecount} \theversecount .~\fi\selectlanguage{latin}#1\selectlanguage{british}\strut\par}
+\def\vern#1{\vskip-6pt{\footnotesize \translationfont #1\par}\par}
+
+\newcounter{versecount}
+\setcounter{versecount}{0}
+
+\newcommand{\rubrics}[1]{\begin{center}\textit{#1}\end{center}}
+
+\begin{document}
+
+Prime as abbreviated by St John's Abbey in A Short Breviary
+
+Sundays and Feasts
+
+\subsection{Psalm 118:1-8}
+
+\setcounter{versecount}{1}
+\latin{Beáti immaculáti in via: * qui ámbulant in lege Dómini.}
+\vern{(Aleph) Blessed are the undefiled in the way, * who walk in the law of the Lord.}
+\latin{Beáti, qui scrutántur testimónia eius: * in toto corde exquírunt eum.}
+\vern{Blessed are they that search his testimonies: * that seek him with their whole heart.}
+\latin{Non enim qui operántur iniquitátem, * in viis eius ambulavérunt.}
+\vern{For they that work iniquity, * have not walked in his ways.}
+\latin{Tu mandásti * mandáta tua custodíri nimis.}
+\vern{Thou hast commanded * thy commandments to be kept most diligently.}
+\latin{Útinam dirigántur viæ meæ, * ad custodiéndas iustificatiónes tuas!}
+\vern{O! that my ways may be directed * to keep thy justifications.}
+\latin{Tunc non confúndar, * cum perspéxero in ómnibus mandátis tuis.}
+\vern{Then shall I not be confounded, * when I shall look into all thy commandments.}
+\latin{Confitébor tibi in directióne cordis: * in eo quod dídici iudícia iustítiæ tuæ.}
+\vern{I will praise thee with uprightness of heart, * when I shall have learned the judgments of thy justice.}
+\latin{Iustificatiónes tuas custódiam: * non me derelínquas usquequáque.}
+\vern{I will keep thy justifications: * O! do not thou utterly forsake me.}
+\latin{In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.}
+
+Mondays
+
+\subsection{Psalm 118:1-8}
+
+\setcounter{versecount}{1}
+\latin{}
+\vern{}
+
+\setcounter{versecount}{0}
+
+
+
+\rubrics{On Maundy Thursday, all then kneel and recite together the following: }
+
+\gregorioscore{Canticle/an--christus_factus_est--solesmes}
+
+\latin{Christus factus est pro nobis obédiens usque ad mortem.}
+\vern{Christ was made for us obedient unto death.}
+
+\rubrics{On Good Friday is added:}
+
+\gregorioscore{Canticle/Christusfactus2}
+
+\latin{mortem autem crucis.}
+\vern{death on the cross.}
+
+\rubrics{On Holy Saturday is added:}
+
+\gregorioscore{Canticle/Christusfactus3}
+
+\latin{propter quod et Deus exaltavit illum, et dedit illi nomen, quod est super omne nomen.}
+\vern{therefore God has exalted him, and given him a name that is above all names.}
+
+\rubrics{All say the Pater Noster silently}
+
+\rubrics{The Collect is said without Oremus %p.~\pageref{collect} 
+again dropping the voice on the last syllable as in the psalms.}
+
+\latin{Réspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Iesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}
+\vern{Look down, we beseech thee, O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.}
+
+\rubrics{finishing silently with:}
+
+\latin{Qui tecum vivit et regnat in unitáte Spíritus Sancti Deus per ómnia sǽcula sæculórum.
+R. Amen.}
+\vern{Who with thee liveth and reigneth, in the unity of the Holy Spirit, one God, world without end. Amen.
+R. Amen.}
+
+\end{document}
