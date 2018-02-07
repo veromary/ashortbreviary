@@ -3,7 +3,8 @@
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont[Numbers=OldStyle]{Linux Libertine O}
-\newfontface{\vectis}{Vectis Bold}
+\newfontface{\vectis}{Jaggard Two}
+%\newfontface{\vectis}{}
 \newfontfamily{\translationfont}{Linux Biolinum O}
 \newfontface{\versicles}{Versiculum}
 \newfontface{\cruci}{Juuji}
@@ -35,6 +36,8 @@
 \setcounter{versecount}{0}
 
 \newcommand{\rubrics}[1]{\begin{center}\textit{#1}\end{center}}
+
+\grechangestyle{initial}{\vectis \fontsize{48}{48}\selectfont}
 
 \begin{document}
 
