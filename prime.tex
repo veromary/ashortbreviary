@@ -5,7 +5,7 @@
 \setmainfont[Numbers=OldStyle]{Linux Libertine O}
 \newfontface{\vectis}{EasyOpenFace}
 %\newfontface{\vectis}{}
-\newfontfamily{\translationfont}{Linux Biolinum O}
+\newfontfamily{\inglesh}{Linux Biolinum O}
 \newfontface{\versicles}{Versiculum}
 \newfontface{\cruci}{Juuji}
 \setsansfont{Linux Biolinum O}
@@ -25,12 +25,18 @@
 \tolerance=1000
 \pretolerance=800
 
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\setlength{\parskip}{6pt plus 2pt minus 1pt}
 \setlength{\parindent}{0pt}
 \setlength{\stanzaskip}{6pt plus 2pt minus 1pt}
 
+\setlength{\parskip}{3pt plus 2pt minus 1pt}
+
 \def\latin#1{\ifnum \value{versecount}>0 \stepcounter{versecount} \theversecount .~\fi\selectlanguage{latin}#1\selectlanguage{british}\strut\par}
-\def\vern#1{\vskip-6pt{\footnotesize \translationfont #1\par}\par}
+\def\vern#1{{\translationfont{#1\par}}\par\pagebreak[3]}
+
+
+\grechangestyle{translation}{\inglesh \fontsize{9}{11}\selectfont}
+\newcommand\translationfont[1]{{\inglesh \fontsize{9}{11}\selectfont #1}}
 
 \newcounter{versecount}
 \setcounter{versecount}{0}
@@ -39,15 +45,55 @@
 
 \grechangestyle{initial}{\vectis \fontsize{48}{48}\selectfont}
 
+\newcommand\bibleref[2]{\smallskip\relax\par\pagebreak[3]\textbf{#1} \hfill \textit{#2}}
+
+\newcommand\psalm[1]{\bigskip\relax\par\pagebreak[3] ~ \hfill \textbf{Psalm #1.} \hfill ~}
+
 \begin{document}
 
 Prime as abbreviated by St John's Abbey in A Short Breviary
 
-Sundays and Feasts
+Pater. Ave. 
+
+\gregorioscore{gabc/deusinadjutorium_ferial}
+
+\section{Hymn}
+
+Tonus in Dominicis per Annum et minoribus Festis.
+
+\gregorioscore{gabc/hy--jam_lucis_orto_sidere_ord_sund--solesmes}
+
+Tonus in majoribus Festis.
+
+\gregorioscore{gabc/hy--jam_lucis_orto_sidere_solemn_feasts--solesmes}
+
+Linguam refraenans temperet,\\
+Ne litis horror insonet:\\
+Visum fovendo contegat,\\
+Ne vanitates hauriat.
+
+Sint pura cordis intima;\\
+Absistat et vecordia:\\
+Carnis terat superbiam\\
+Potus cibique parcitas:
+
+Ut cum dies abscesserit,\\
+Noctemque sors reduxerit,\\
+Mundi per abstinentiam\\
+Ipsi canamus gloriam.
+
+Deo Patri sit gloria,\\
+Ejusque soli Filio,\\
+Cum Spiritu Paraclito,\\
+Nunc, et per omne saeculum.
+
+\section{Psalms}
+
+\subsection{Sundays and Feasts}
 
 \gregorioscore{gabc/an--alleluia_sund_p_t_at_prime--solesmes}
 
-\subsection{Psalm 118:1-8}
+\psalm{118a}
 
 \gregorioscore{gabc/118.1-3b}
 
@@ -68,12 +114,12 @@ Sundays and Feasts
 \vern{I will keep thy justifications: * O! do not thou utterly forsake me.}
 \latin{In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.}
 
-Mondays
+\subsection{Mondays}
 
 Antiphon: He who is innocent of hands and pure of heart shall go up unto the mountain of the Lord.
 \gregorioscore{gabc/an--innocens_manibus--solesmes}
 
-\subsection{Psalm 23}
+\psalm{23}
 
 \setcounter{versecount}{1}
 \latin{}
@@ -81,54 +127,54 @@ Antiphon: He who is innocent of hands and pure of heart shall go up unto the mou
 
 \setcounter{versecount}{0}
 
-Tuesday
+\subsection{Tuesday}
 
 Antiphon:
 My God, in Thee I trust; I shall not be ashamed.
 \gregorioscore{gabc/an--deus_meus_in_te_confido--solesmes}
 
-Psalm 24
+\psalm{24}
 
 To Thee, O Lord, I lift up my soul,
 
-Wednesday
+\subsection{Wednesday}
 
 Antiphon:
 Thy mercy is before mine eyes, and I find my pleasure in Thy truth.
 
 \gregorioscore{gabc/an--misericordia_tua--solesmes}
 
-Psalm 25
+\psalm{25}
 Judge me, O Lord
 
-Thursday
+\subsection{Thursday}
 
 Antiphon:
 In green pastures the Lord hath settled me.
 
 \gregorioscore{gabc/an--in_loco_pascuae_ibi_dominus--solesmes}
 
-Psalm 22
+\psalm{22}
 The Lord is my shepherd and nothing is wanting to me;
 
-Friday
+\subsection{Friday}
 
 Antiphon
 Blessed are they that dwell in Thy House, O Lord.
 
 \gregorioscore{gabc/an--ne_discedas--solesmes}
 
-Psalm 83: 1-8
+\psalm{83}
 How lovely are Thy tabernacles, O Lord of hosts!
 
-Saturday
+\subsection{Saturday}
 
 Antiphon
 Thy mercy is even into the heavens, and Thy truth even to the clouds.
 
 \gregorioscore{gabc/an--exaltare_domine--solesmes}
 
-Psalm 107
+\psalm{107}
 My heart is firm, O God,
 
 Antiphons for the Sundays in Septuagesima:
@@ -136,17 +182,117 @@ According to Thy great mercy, * have mercy on my, O God.
 
 \gregorioscore{gabc/an--miserere_secundum--dominican}
 
-Lent
-Antiphon for weekdays:
+\section{Lent}
+
+Antiphon for Lent:
 
 \gregorioscore{gabc/an--vivo_ego_dicit--solesmes}
 
-Passiontide
+\input primelentpsalms
+
+\section{Passiontide}
 Antiphon
 Deliver Me, O Lord, * and set Me beside Thee; and let any man's hand fight against Me.
 
 \gregorioscore{gabc/an--libera_me_domine--solesmes}
 
+\section{After the Psalms}
+
+
+\bibleref{Short Chapter}{1 Tim 1:17}
+
+\latin{Regi autem saeculorum immortali, invisibili, soli Deo honor et gloria in saecula saeculorum. Amen.}
+\vern{Now to the king of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen.}
+
+\latin{Deo gratias.}
+\vern{Thanks be to God.}
+
+Arise, O Christ, and help us.
+
+And deliver us for Thy Name's sake.
+
+Lord, have mercy on us. Christ, have mercy on us. Lord, have mercy on us.
+
+Our Father (silently)
+
+And lead us not into temptation.
+
+But deliver us from evil.
+
+\latin{\Vbar Dómine, exáudi oratiónem meam.}
+\vern{O Lord, hear my prayer.}
+\latin{\Rbar Et clamor meus ad te véniat.}
+\vern{And let my cry come unto Thee.}
+\latin{Orémus.}
+\vern{Let us pray.}
+\latin{Dómine Deus omnípotens, qui ad princípium huius diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam iustítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera.
+Per Dóminum nostrum Iesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum.}
+\vern{O Lord God Almighty, who hast brought us to the beginning of this day, preserve us in the same by Thy power, that during this day we may not fall into any sin, but that all our words, thoughts and works may be directed to the doing of Thy righteousness. Though our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.}
+\latin{Amen.}
+\vern{Amen.}
+
+\latin{\Vbar Dómine, exáudi oratiónem meam.}
+\vern{O Lord, hear my prayer.}
+\latin{\Rbar Et clamor meus ad te véniat.}
+\vern{And let my cry come unto Thee.}
+
+
+\rubrics{The Martyrology may here be read.}
+
+\latin{Deo gratias.}
+\vern{Thanks be to God.}
+
+\latin{Pretiosa in conspectu Domini.}
+\vern{Precious in the sight of the Lord.}
+\latin{Mors Sanctórum ejus.}
+\vern{Is the death of his Saints.}
+\latin{Sancta María et omnes Sancti intercédant pro nobis ad Dóminum, \dag\ 
+ut nos mereámur ab eo adjuvári et salvári, * qui vivit et regnat in saécula saeculórum. \Rbar Amen.}
+\vern{May holy Mary and all the Saints plead for us with the Lord, that we may be helped and saved by Him who liveth and reigneth forever and ever. Amen.}
+
+\latin{\Vbar Réspice in servos tuos, Dómine, et in ópera tua, et dírige fílios eórum.}
+\vern{Look upon thy servants and upon thy works: and direct their children.}
+\latin{\Rbar Et sit splendor Dómini Dei nostri super nos, et ópera mánuum nostrárum dírige super nos, et opus mánuum nostrárum dírige.}
+\vern{And let the brightness of the Lord our God be upon us. Direct thou the works of our hands; yea, the work of our hands do thou direct.}
+\latin{\Vbar Glória Patri, et Fílio, * et Spirítui Sancto.}
+\vern{Glory be to the Father, and to the Son, and to the Holy Ghost.}
+\latin{\Rbar Sicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.}
+\vern{As it was in the beginning, is now, and ever shall be, world without end. Amen.}
+\latin{Orémus.}
+\vern{Let us pray.}
+\latin{Dirígere et sanctificáre, régere et gubernáre dignáre, Dómine Deus, Rex cæli et terræ, hódie corda et córpora nostra, sensus, sermónes et actus nostros in lege tua, et in opéribus mandatórum tuórum: ut hic et in ætérnum, te auxiliánte, salvi et líberi esse mereámur, Salvátor mundi: Qui vivis et regnas in sǽcula sæculórum.}
+\vern{O Lord, Almighty God, King of heaven and earth, Savior of the world, bless, lead, rule and govern our hearts and bodies, our senses, words and deeds today, following thy law and commandments, that here and for eternity with thy help we shall be saved in freedom. Who lives and reigns for ever and ever.}
+
+R. Amen.
+
+Jube Domine, benedicere.
+
+\latin{Dies et actus nostros in sua pace dispónat Dóminus omnípotens. Amen.}
+\vern{May Almighty God arrange our deeds and our day in His peace. Amen.}
+
+\bibleref{Lesson}{Isaias 55:6}
+
+Seek ye the Lord while He may be found; call ye upon Him while He is near.
+
+Thanks be to God.
+
+\latin{Adjutórium nostrum in nomine Domini.}
+\vern{Our help is in the name of the Lord.}
+\latin{Qui fecit caelum et terra.}
+\vern{Who hath made heaven and earth.}
+
+Let us make a remembrance of all our departed brethren, friends and benefactors.
+
+\latin{\Vbar Requiescant in pace.}
+\vern{May they rest in peace.}
+
+\Rbar Amen.
+
+\psalm{129}
+
+
+
+\section{Sacred Triduum}
 
 \rubrics{On Maundy Thursday, all then kneel and recite together the following: }
 
