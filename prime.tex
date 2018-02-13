@@ -1,14 +1,20 @@
 \documentclass[a5paper,12pt,twoside,openany,oldfontcommands]{memoir}
 \usepackage[british,latin]{babel}
 \usepackage{fontspec}
+\usepackage{lettrine}
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont[Numbers=OldStyle]{Linux Libertine O}
-\newfontface{\vectis}{EasyOpenFace}
-%\newfontface{\vectis}{}
+\newfontface{\oremuses}{EasyOpenFace}
+%\newfontface{\vectis}{Blenda Script}
+%\newfontface{\vectis}{Black Rose}
+%\newfontface{\vectis}{Comic Sans MS}
+%\newfontface{\vectis}{times new vespasian}
+\newfontface{\vectis}{Animal Caps}
 \newfontfamily{\inglesh}{Linux Biolinum O}
 \newfontface{\versicles}{Versiculum}
 \newfontface{\cruci}{Juuji}
 \setsansfont{Linux Biolinum O}
+\renewcommand{\LettrineFontHook}{\oremuses}
 
 \usepackage[autocompile]{gregoriotex}
 %\settrimmedsize{9in}{6in}{*}
@@ -51,6 +57,14 @@
 
 \begin{document}
 
+\begin{center}
+
+\textsc{\Large Prime Booklet}
+
+Being a booklet for Lent through to Passion Sunday with unfinished bits but hopefully usable for now.
+
+\end{center}
+
 Prime as abbreviated by St John's Abbey in A Short Breviary
 
 Pater. Ave. 
@@ -68,48 +82,58 @@ Tonus in majoribus Festis.
 \gregorioscore{gabc/hy--jam_lucis_orto_sidere_solemn_feasts--solesmes}
 
 \begin{minipage}[t]{55mm}
-Linguam refrǽnans temperet,\\
-Ne litis horror insonet:\\
-Visum fovendo contegat,\\
-Ne vanitates hauriat.
+Linguam refrǽnans témperet,\\
+Ne litis horror ínsonet:\\
+Visum fovéndo cóntegat,\\
+Ne vanitátes háuriat.
 \end{minipage}\begin{minipage}[t]{55mm}
 \translationfont{Would guard our hearts \& tongues from strife;\\
 From anger's din would hide our life;\\
 From all ill sights would turn our eyes;\\
 Would close our ears from vanities.}
 \end{minipage}
+
 \par
+
+~
+
 \begin{minipage}[t]{55mm}
-Sint pura cordis intima;\\
-Absistat et vecordia:\\
-Carnis terat superbiam\\
-Potus cibique parcitas:
+Sint pura cordis íntima;\\
+Absístat et vecórdia:\\
+Carnis terat supérbiam\\
+Potus cibíque párcitas:
 \end{minipage}\begin{minipage}[t]{55mm}
 \translationfont{Would keep our inmost conscience pure;\\
 Our souls from, folly would secure:\\
 Would bid us check the pride of sense\\
 With due and holy abstinence.}
 \end{minipage}
+
 \par
 
+~
+
 \begin{minipage}[t]{55mm}
-Ut cum dies abscesserit,\\
-Noctemque sors reduxerit,\\
-Mundi per abstinentiam\\
-Ipsi canamus gloriam.
+Ut cum dies abscésserit,\\
+Noctémque sors redúxerit,\\
+Mundi per abstinéntiam\\
+Ipsi canámus glóriam.
 \end{minipage}\begin{minipage}[t]{55mm}
 \translationfont{So we, when this new day is gone\\
 And night in turn is drawing on,\\
 With conscience by the world unstained\\
 Shall praise His Name for vict'ry gained.}
 \end{minipage}
+
 \par
 
+~
+
 \begin{minipage}[t]{55mm}
-Deo Patri sit gloria,\\
-Ejusque soli Filio,\\
-Cum Spiritu Paraclito,\\
-Nunc, et per omne saeculum.\\
+Deo Patri sit glória,\\
+Ejúsque soli Fílio,\\
+Cum Spíritu Paráclito,\\
+Nunc, et per omne saéculum.\\
 Amen.
 \end{minipage}\begin{minipage}[t]{55mm}
 \translationfont{All laud to God the Father be;\\
@@ -118,6 +142,7 @@ All praise forever, as is meet,\\
 To God the Holy Paraclete.\\
 Amen.}
 \end{minipage}
+
 \par
 
 
@@ -230,6 +255,14 @@ Deliver Me, O Lord, * and set Me beside Thee; and let any man's hand fight again
 
 \gregorioscore{gabc/an--libera_me_domine--solesmes}
 
+\subsection{Sunday}
+
+\psalm{118a}
+
+\gregorioscore{gabc/118.1-1a2}
+
+\input Psalms/118.1-1.tex
+
 \chapter{After the Psalms}
 
 \setcounter{versecount}{0}
@@ -238,20 +271,20 @@ Deliver Me, O Lord, * and set Me beside Thee; and let any man's hand fight again
 
 \bibleref{Short Chapter}{1 Tim 1:17}
 
-\latin{Regi autem saeculórum immortáli, invisíbili, \dag\ soli Deo honor et glória * in sǽcula saeculórum. Amen.}
+\latin{\lettrine{R}{egi autem saeculórum} immortáli, invisíbili, \dag\ soli Deo honor et glória * in sǽcula saeculórum. Amen.}
 \vern{Now to the king of ages, immortal, invisible, the only God, be honour and glory for ever and ever. Amen.}
 
-\latin{Deo gratias.}
+\latin{Deo grátias.}
 \vern{Thanks be to God.}
 
 \rubrics{In all Ferias outside of Paschaltide:}
 
 \bibleref{Short Chapter}{Zach 8:19}
 
-\latin{Pacem et veritátem dilígite, * ait Dóminus omnípotens.}
-\vern{Love ye peace and truth, saith the Lord Almighty.}
+\latin{\lettrine{P}{acem et veritátem} dilígite, * ait Dóminus omnípotens.}
+\vern{\qquad \qquad Love ye peace and truth, saith the Lord Almighty.}
 
-\latin{Deo gratias.}
+\latin{Deo grátias.}
 \vern{Thanks be to God.}
 
 
@@ -279,8 +312,13 @@ But deliver us from evil.
 \vern{And let my cry come unto Thee.}
 \latin{Orémus.}
 \vern{Let us pray.}
-\latin{Dómine Deus omnípotens, qui ad princípium huius diéi nos perveníre fecísti: tua nos hódie salva virtúte; ut in hac die ad nullum declinémus peccátum, sed semper ad tuam iustítiam faciéndam nostra procédant elóquia, dirigántur cogitatiónes et ópera.
-Per Dóminum nostrum Iesum Christum, Fílium tuum: qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, per ómnia sǽcula sæculórum.}
+\latin{\lettrine{D}{ómine Deus omnípotens,} 
+qui ad princípium huius diéi nos perveníre fecísti: \dag\ 
+tua nos hódie salva virtúte; 
+ut in hac die ad nullum declinémus peccátum, 
+sed semper ad tuam iustítiam faciéndam nostra procédant elóquia, * 
+dirigántur cogitatiónes et ópera.
+Per Dóminum nostrum Iesum Christum, Fílium tuum: \dag\ qui tecum vivit et regnat in unitáte Spíritus Sancti Deus, * per ómnia sǽcula sæculórum.}
 \vern{O Lord God Almighty, who hast brought us to the beginning of this day, preserve us in the same by Thy power, that during this day we may not fall into any sin, but that all our words, thoughts and works may be directed to the doing of Thy righteousness. Though our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God, world without end.}
 \latin{Amen.}
 \vern{Amen.}
@@ -293,20 +331,45 @@ Per Dóminum nostrum Iesum Christum, Fílium tuum: qui tecum vivit et regnat in 
 
 \rubrics{The Martyrology may here be read.}
 
-\latin{Deo gratias.}
+\latin{Deo grátias.}
 \vern{Thanks be to God.}
 
-\latin{Pretiosa in conspectu Domini.}
+\latin{Pretiósa in conspéctu Dómini.}
 \vern{Precious in the sight of the Lord.}
 \latin{Mors Sanctórum ejus.}
 \vern{Is the death of his Saints.}
-\latin{Sancta María et omnes Sancti intercédant pro nobis ad Dóminum, \dag\ 
+\latin{\lettrine{S}{ancta María} et omnes Sancti intercédant pro nobis ad Dóminum, \dag\ 
 ut nos mereámur ab eo adjuvári et salvári, * qui vivit et regnat in saécula saeculórum. \Rbar . Amen.}
 \vern{May holy Mary and all the Saints plead for us with the Lord, that we may be helped and saved by Him who liveth and reigneth forever and ever. Amen.}
 
+\latin{\Vbar. Deus in adjutórium meum inténde.}
+\vern{O God, come to my assistance.}
+\latin{\Rbar. Dómine, ad adjuvándum me festína.}
+\vern{O Lord, make haste to help me.}
+
+\rubrics{This versicle and response is repeated three times, and then is added}
+
+\latin{\Vbar . Glória Patri, et Fílio, * et Spirítui Sancto.}
+\vern{Glory be to the Father, and to the Son, and to the Holy Ghost.}
+\latin{\Rbar . Sicut erat in princípio, et nunc, et semper, * et in sǽcula sæculórum. Amen.}
+\vern{As it was in the beginning, is now, and ever shall be, world without end. Amen.}
+
+\gregorioscore{gabc/or--kyrie_-_supplicatio--solesmes}
+
+Lord, have mercy on us. Christ, have mercy on us. Lord, have mercy on us.
+
+\gregorioscore{gabc/or--pater_noster_-_supplicatio--solesmes}
+
+Our Father (silently)
+
+And lead us not into temptation.
+
+But deliver us from evil.
+
+
 \latin{\Vbar . Réspice in servos tuos, Dómine, et in ópera tua, et dírige fílios eórum.}
 \vern{Look upon thy servants and upon thy works: and direct their children.}
-\latin{\Rbar . Et sit splendor Dómini Dei nostri super nos, et ópera mánuum nostrárum dírige super nos, et opus mánuum nostrárum dírige.}
+\latin{\Rbar . Et sit splendor Dómini Dei nostri super nos, \dag\ et ópera mánuum nostrárum dírige super nos, * et opus mánuum nostrárum dírige.}
 \vern{And let the brightness of the Lord our God be upon us. Direct thou the works of our hands; yea, the work of our hands do thou direct.}
 \latin{\Vbar . Glória Patri, et Fílio, * et Spirítui Sancto.}
 \vern{Glory be to the Father, and to the Son, and to the Holy Ghost.}
@@ -314,7 +377,7 @@ ut nos mereámur ab eo adjuvári et salvári, * qui vivit et regnat in saécula 
 \vern{As it was in the beginning, is now, and ever shall be, world without end. Amen.}
 \latin{Orémus.}
 \vern{Let us pray.}
-\latin{Dirígere et sanctificáre, régere et gubernáre dignáre, Dómine Deus, Rex cæli et terræ, \dag\ 
+\latin{\lettrine{D}{irígere} et sanctificáre, régere et gubernáre dignáre, Dómine Deus, Rex cæli et terræ, \dag\ 
 hódie corda et córpora nostra, sensus, sermónes et actus nostros in lege tua, et in opéribus mandatórum tuórum: * 
 ut hic et in ætérnum, te auxiliánte, salvi et líberi esse mereámur, Salvátor mundi: Qui vivis et regnas in sǽcula sæculórum.}
 \vern{O Lord, Almighty God, King of heaven and earth, Savior of the world, bless, lead, rule and govern our hearts and bodies, our senses, words and deeds today, following thy law and commandments, that here and for eternity with thy help we shall be saved in freedom. Who lives and reigns for ever and ever.}
@@ -323,7 +386,7 @@ ut hic et in ætérnum, te auxiliánte, salvi et líberi esse mereámur, Salvát
 
 Jube Domine, benedicere.
 
-\latin{Dies et actus nostros in sua pace dispónat Dóminus omnípotens. Amen.}
+\latin{\lettrine{D}{ies et actus nostros} in sua pace dispónat Dóminus omnípotens. Amen.}
 \vern{May Almighty God arrange our deeds and our day in His peace. Amen.}
 
 
@@ -333,7 +396,7 @@ Jube Domine, benedicere.
 
 \bibleref{Lesson}{Isaias 55:6}
 
-\latin{Quǽrite Dóminum dum inveníri potest; invocáte eum dum prope est.}
+\latin{\lettrine{Q}{uǽrite Dóminum} dum inveníri potest; invocáte eum dum prope est.}
 \vern{Seek ye the Lord while He may be found; call ye upon Him while He is near.}
 \latin{Tu autem Dómine, miserére nobis.}
 \vern{Do Thou O Lord, have mercy on us.}
@@ -344,7 +407,7 @@ Jube Domine, benedicere.
 
 \bibleref{Lectio Brevis}{Isaias 50:6--7}
 
-\latin{Faciem meam non avérti ab increpántibus, et conspuéntibus in me. Dóminus Deus auxiliátor meus, et ídeo non sum confúsus.}
+\latin{\lettrine{F}{aciem meam} non avérti ab increpántibus, et conspuéntibus in me. Dóminus Deus auxiliátor meus, et ídeo non sum confúsus.}
 \vern{I have not turned away my face from them that rebuked me, and spit upon me. The Lord God is my helper, therefore am I not confounded.}
 \latin{Tu autem Dómine, miserére nobis.}
 \vern{Do Thou O Lord, have mercy on us.}
@@ -408,7 +471,7 @@ Let us make a remembrance of all our departed brethren, friends and benefactors.
 
 \latin{Orémus.}
 \vern{Let us pray.}
-\latin{Deus véniæ largítor et humánæ salútis amátor: quǽsumus cleméntiam tuam: ut ánimas ómnium fidélium qui ex hoc sǽculo transiérunt, beáta María semper vírgine intercedénte cum ómnibus sanctis tuis ad perpétuæ beatitúdinis consórtium perveníre concédas. Per Christum Dóminum nóstrum.}
+\latin{\lettrine{D}{eus} véniæ largítor et humánæ salútis amátor: \dag\ quǽsumus cleméntiam tuam: ut ánimas ómnium fidélium qui ex hoc sǽculo transiérunt, * beáta María semper vírgine intercedénte cum ómnibus sanctis tuis ad perpétuæ beatitúdinis consórtium perveníre concédas. Per Christum Dóminum nóstrum.}
 \vern{O God the giver of pardon, and the lover of human salvation, we beseech thy clemency: that thou grant the brethren of our congregation, kinsfolk, and benefactors, which are departed out of this world, blessed Mary ever virgin making intercession with all the saints, to come to the fellowship of eternal blessedness. Through our Lord Jesus Christ.}
 \latin{\Rbar . Amen}
 \vern{Amen.}
@@ -425,6 +488,101 @@ Let us make a remembrance of all our departed brethren, friends and benefactors.
 \chapter{Special cases}
 
 \section{Sacred Triduum}
+
+\psalm{53}
+
+\setcounter{versecount}{1}
+\latin{Deus, in nómine tuo salvum me fac: * et in virtúte tua iúdica me.}
+\vern{Save me, O God, by thy name, * and judge me in thy strength.}
+\latin{Deus, exáudi oratiónem meam: * áuribus pércipe verba oris mei.}
+\vern{O God, hear my prayer: * give ear to the words of my mouth.}
+\latin{Quóniam aliéni insurrexérunt advérsum me, et fortes quæsiérunt ánimam meam: * et non proposuérunt Deum ante conspéctum suum.}
+\vern{For strangers have risen up against me; and the mighty have sought after my soul: * and they have not set God before their eyes.}
+\latin{Ecce enim, Deus ádiuvat me: * et Dóminus suscéptor est ánimæ meæ.}
+\vern{For behold God is my helper: * and the Lord is the protector of my soul.}
+\latin{Avérte mala inimícis meis: * et in veritáte tua dispérde illos.}
+\vern{Turn back the evils upon my enemies; * and cut them off in thy truth.}
+\latin{Voluntárie sacrificábo tibi, * et confitébor nómini tuo, Dómine: quóniam bonum est:}
+\vern{I will freely sacrifice to thee, * and will give praise, O God, to thy name: because it is good:}
+\latin{Quóniam ex omni tribulatióne eripuísti me: * et super inimícos meos despéxit óculus meus.}
+\vern{For thou hast delivered me out of all trouble: * and my eye hath looked down upon my enemies.}
+
+\rubrics{Gloria omittitur}
+
+\psalm{118 aleph beth}
+
+\setcounter{versecount}{1}
+\latin{Beáti immaculáti in via: * qui ámbulant in lege Dómini.}
+\vern{(Aleph) Blessed are the undefiled in the way, * who walk in the law of the Lord.}
+\latin{Beáti, qui scrutántur testimónia eius: * in toto corde exquírunt eum.}
+\vern{Blessed are they that search his testimonies: * that seek him with their whole heart.}
+\latin{Non enim qui operántur iniquitátem, * in viis eius ambulavérunt.}
+\vern{For they that work iniquity, * have not walked in his ways.}
+\latin{Tu mandásti * mandáta tua custodíri nimis.}
+\vern{Thou hast commanded * thy commandments to be kept most diligently.}
+\latin{Útinam dirigántur viæ meæ, * ad custodiéndas iustificatiónes tuas!}
+\vern{O! that my ways may be directed * to keep thy justifications.}
+\latin{Tunc non confúndar, * cum perspéxero in ómnibus mandátis tuis.}
+\vern{Then shall I not be confounded, * when I shall look into all thy commandments.}
+\latin{Confitébor tibi in directióne cordis: * in eo quod dídici iudícia iustítiæ tuæ.}
+\vern{I will praise thee with uprightness of heart, * when I shall have learned the judgments of thy justice.}
+\latin{Iustificatiónes tuas custódiam: * non me derelínquas usquequáque.}
+\vern{I will keep thy justifications: * O! do not thou utterly forsake me.}
+\latin{In quo córrigit adolescéntior viam suam? * In custodiéndo sermónes tuos.}
+\vern{(Beth) By what doth a young man correct his way? * By observing thy words.}
+\latin{In toto corde meo exquisívi te: * ne repéllas me a mandátis tuis.}
+\vern{With my whole heart have I sought after thee: * let me not stray from thy commandments.}
+\latin{In corde meo abscóndi elóquia tua: * ut non peccem tibi.}
+\vern{Thy words have I hidden in my heart, * that I may not sin against thee.}
+\latin{Benedíctus es, Dómine: * doce me iustificatiónes tuas.}
+\vern{Blessed art thou, O Lord: * teach me thy justifications.}
+\latin{In lábiis meis, * pronuntiávi ómnia iudícia oris tui.}
+\vern{With my lips * I have pronounced all the judgments of thy mouth.}
+\latin{In via testimoniórum tuórum delectátus sum, * sicut in ómnibus divítiis.}
+\vern{I have been delighted in the way of thy testimonies, * as in all riches.}
+\latin{In mandátis tuis exercébor: * et considerábo vias tuas.}
+\vern{I will meditate on thy commandments: * and I will consider thy ways.}
+\latin{-In iustificatiónibus tuis meditábor: * non oblivíscar sermónes tuos.}
+\vern{I will think of thy justifications: * I will not forget thy words.}
+
+\psalm{118 ghimel daleth}
+
+\setcounter{versecount}{1}
+\latin{Retríbue servo tuo, vivífica me: * et custódiam sermónes tuos:}
+\vern{(Ghimel) Give bountifully to thy servant, enliven me * and I shall keep thy words.}
+\latin{Revéla óculos meos: * et considerábo mirabília de lege tua.}
+\vern{Open thou my eyes: * and I will consider the wondrous things of thy law.}
+\latin{Íncola ego sum in terra: * non abscóndas a me mandáta tua.}
+\vern{I am a sojourner on the earth: * hide not thy commandments from me.}
+\latin{Concupívit ánima mea desideráre iustificatiónes tuas, * in omni témpore.}
+\vern{My soul hath coveted to long for thy justifications, * at all times.}
+\latin{Increpásti supérbos: * maledícti qui declínant a mandátis tuis.}
+\vern{Thou hast rebuked the proud: * they are cursed who decline from thy commandments.}
+\latin{Aufer a me oppróbrium, et contémptum: * quia testimónia tua exquisívi.}
+\vern{Remove from me reproach and contempt: * because I have sought after thy testimonies.}
+\latin{Étenim sedérunt príncipes, et advérsum me loquebántur: * servus autem tuus exercebátur in iustificatiónibus tuis.}
+\vern{For princes sat, and spoke against me: * but thy servant was employed in thy justifications.}
+\latin{Nam et testimónia tua meditátio mea est: * et consílium meum iustificatiónes tuæ.}
+\vern{For thy testimonies are my meditation: * and thy justifications my counsel.}
+\latin{Adhæsit paviménto ánima mea: * vivífica me secúndum verbum tuum.}
+\vern{(Daleth) My soul hath cleaved to the pavement: * quicken thou me according to thy word.}
+\latin{Vias meas enuntiávi, et exaudísti me: * doce me iustificatiónes tuas.}
+\vern{I have declared my ways, and thou hast heard me: * teach me thy justifications.}
+\latin{Viam iustificatiónum tuárum ínstrue me: * et exercébor in mirabílibus tuis.}
+\vern{Make me to understand the way of thy justifications: * and I shall be exercised in thy wondrous works.}
+\latin{Dormitávit ánima mea præ tædio: * confírma me in verbis tuis.}
+\vern{My soul hath slumbered through heaviness: * strengthen thou me in thy words.}
+\latin{Viam iniquitátis ámove a me: * et de lege tua miserére mei.}
+\vern{Remove from me the way of iniquity: * and out of thy law have mercy on me.}
+\latin{Viam veritátis elégi: * iudícia tua non sum oblítus.}
+\vern{I have chosen the way of truth: * thy judgments I have not forgotten.}
+\latin{Adhæsi testimóniis tuis, Dómine: * noli me confúndere.}
+\vern{I have stuck to thy testimonies, O Lord: * put me not to shame.}
+\latin{Viam mandatórum tuórum cucúrri, * cum dilatásti cor meum.}
+\vern{I have run the way of thy commandments, * when thou didst enlarge my heart.}
+
+\setcounter{versecount}{0}
+
 
 \rubrics{On Maundy Thursday, all then kneel and recite together the following: }
 
@@ -452,7 +610,7 @@ Let us make a remembrance of all our departed brethren, friends and benefactors.
 \rubrics{The Collect is said without Oremus %p.~\pageref{collect} 
 again dropping the voice on the last syllable as in the psalms.}
 
-\latin{Réspice, quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Iesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}
+\latin{\lettrine{R}{éspice,} quǽsumus, Dómine, super hanc famíliam tuam, pro qua Dóminus noster Iesus Christus non dubitávit mánibus tradi nocéntium, et crucis subíre torméntum:}
 \vern{Look down, we beseech thee, O Lord, on this thy family, for which our Lord Jesus Christ did not hesitate to be delivered up into the hands of wicked men, and to suffer the torment of the Cross.}
 
 \rubrics{finishing silently with:}
